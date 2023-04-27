@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1000px;
   }
 
   .btn {
@@ -27,11 +28,14 @@
     width: 200px;
     height: 80px;
     text-align: center;
+    transform-origin: center;
+    transform-style: preserve-3d;
   }
 
   .btn.open {
     width: 400px;
     height: 160px;
+    transform: rotate(180deg);
   }
   /* Front Side */
   .front {
@@ -43,7 +47,13 @@
     color: #fff;
     font-size: 1.2rem;
     cursor: pointer;
+    backface-visibility: hidden;
     transition: background 0.15s ease;
+  }
+
+  .btn.open .front {
+    pointer-events: none;
+    line-height: 160px;
   }
 
   .front:hover {
@@ -59,6 +69,7 @@
     background-color: #eee;
     color: #222;
     overflow: hidden;
+    transform: translateZ(-2px) rotateX(180deg);
   }
 
   .btn.open .back {
