@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    user-select: none;
+  }
+  
+  :root {
+    --red: #f44336;
+    --light-red: #f77066;
+    --blue: #2196f3;
+    --light-blue: #51adf6;
+  }
