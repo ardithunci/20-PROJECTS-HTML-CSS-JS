@@ -95,6 +95,7 @@ header {
     border-radius: 10px;
     overflow: hidden;
     transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
 }
 
 .dropdown_menu.open{
@@ -129,7 +130,7 @@ section#hero{
     margin-right: 1rem;
 }
 /* RESPONSIVE DESING */
-@media (max-width:992px){
+@media (max-width: 992px){
     .navbar .links,
     .navbar .action_btn {
         display: none;
