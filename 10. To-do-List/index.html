@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simple To-Do-List</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h2>TODO LIST</h2>
+        <h3>Add Item</h3>
+        <p>
+            <input type="text" id="new-task">
+            <button> Add </button>
+        </p>
+        <h3>Todo</h3>
+        <ul id="incomplete-tasks">
+            <li>
+                <input type="checkbox">
+                <label for="">Pay Bills</label>
+                <input type="text">
+                <button class="edit"> Edit </button>
+                <button class="delete"> Delete </button>
+            </li>
+            <li>
+                <input type="checkbox">
+                <label for="">Go Shoping</label>
+                <input type="text">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+            </li>
+        </ul>
+        <h3>Completed</h3>
+        <ul id="completed-tasks">
+            <li><input type="checkbox">
+            <label for="">Meeting</label>
+            <input type="text">
+            <button class="edit">Edit</button>
+            <button class="delete">Delete</button>
+            </li>
+        </ul>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
