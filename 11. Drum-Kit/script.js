@@ -8,6 +8,7 @@ for (let click of clickPlay){
         }
         click.classList.toggle("playing");
         const audio = document.querySelector(`audio[data-key="${click.dataset.key}"]`);
+        audio.currentTime = 0;
         audio.play();
     })
 }
@@ -51,6 +52,7 @@ window.addEventListener("keyup",(e)=>{
        const key = document.querySelector(`div[data-key="${keyCode}"]`)
        key.classList.toggle("playing"); 
        const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+       audio.currentTime = 0;
        audio.play();
     }
 })
