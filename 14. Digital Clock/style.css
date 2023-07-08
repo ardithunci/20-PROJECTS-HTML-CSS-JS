@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Sedgwick+Ave+Display&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#0007, #0000), #123;
+    background-repeat: no-repeat;
+}
+
+.main {
+    background-color: #ddd;
+    width: 400px;
+    margin: 100px auto;
+    height: 175px; 
+    position: relative;
+    padding: 30px;
+}
+
+.badge {
+    width: 96px;
+    background: #e66357;
+    color: white;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    left: 40%;
+}
+
+.clock {
+    background-color: #ebebeb;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 48px;
+    height: 100%;
+    padding: 25px;
+    border-radius: 4px;
+}
