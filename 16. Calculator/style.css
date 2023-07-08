@@ -1,5 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Teko:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Teko', sans-serif;
+  background: linear-gradient(#0007, #0000), #123;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+  color: #fff;
+  font-size: 3rem;
+}
+
+.container {
+    width: 396px;
+    text-align: right;
+    background-color: #031927;
+    border: 10px solid #47b5ff72;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.display {
+    overflow: hidden;
+}
+
+.display .number-display {
+    margin-right: 10px;
+}
+
+.calculator-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    width: 98.769px;
+    height: 98.769px;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #06367d63;
+    border: 1px solid #1363DF;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #093e8d7a;
+}
+
+.btn:active {
+    font-size: 1.7rem;
+    background-color: #06367d63;
+}
+
+#btn-clear {
+    width: 197px; 
+}
+#btn-0 {
+    width: 296px; 
 }
