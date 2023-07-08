@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&family=Teko:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Teko', sans-serif;
+  background: linear-gradient(#0007, #0000), #123;
+  color: #fff;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-size: 3rem;
+}
+
+header {
+    background-color: #64CCC5;
+    padding: 10px;
+}
+
+header > h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.score-keeper {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 3.5rem;
+    border-bottom: 2px solid #64CCC5;
+}
+.score-info {
+    width: 180px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-keeper #player-score, #ai-score{
+    padding: 0px 20px;
+}
+
+.score-keeper p{
+    text-align: center;
+    display: flex; 
+}
+
+.score-keeper p:hover{
+    color: #64CCC5;
+    cursor: grab;
+}
+
+.player, .ai {
+    width: 65px;
+}
+
+.player {
+    margin-left: 15px;
+}
+
+.ai {
+    margin-right: 15px;
+}
+
+.game-comment {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+}
+
+.play-ground {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.play-ground img {
+    border: 2px solid #64CCC5;
+    border-radius: 50%;
+    width: 125px;
+    margin-left: 50px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.play-ground img:first-child {
+    margin-left: 0px;
+}
+
+.play-ground img:hover {
+    background-color: rgb(18, 29, 40);
+    padding: 17px;
+}
+
+.play-ground img:active {
+    background-color: rgb(18, 29, 40);
+    padding: 20px;
+}
+
+/* RESET BUTTON position */
+.reset {
+    text-align: center;
+    margin-top: 110px;
+}
+/* RESET BUTTON style */
+.reset-button {
+  --c: #fff;
+  /* text color */
+  background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p,100%)/300% no-repeat,
+  #64CCC5;
+  /* background color */
+  color: #0000;
+  border: none;
+  transform: perspective(500px) rotateY(calc(20deg*var(--_i,-1)));
+  text-shadow: calc(var(--_i,-1)* 0.08em) -.01em 0   var(--c),
+    calc(var(--_i,-1)*-0.08em)  .01em 2px #0004;
+  outline-offset: .1em;
+  transition: 0.3s;
+}
+
+.reset-button:hover,
+.reset-button:focus-visible {
+  --_p: 0%;
+  --_i: 1;
+}
+
+.reset-button:active {
+  text-shadow: none;
+  color: var(--c);
+  box-shadow: inset 0 0 9e9q #0005;
+  transition: 0s;
+}
+
+.reset-button {
+  font-weight: bold;
+  font-size: 2rem;
+  margin: 0;
+  cursor: pointer;
+  padding: .1em .3em;
+}
+
+.button-display {
+    display: none;
+}
+
+@media (max-width: 545px) {
+    header > h1 {
+        font-size: 3rem;
+    }
+    .score-keeper {
+        font-size: 3rem;
+    }
+    .play-ground img {
+        width: 115px;
+    }
+    .game-comment {
+        font-size: 2.8rem;
+    }
+}
