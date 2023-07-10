@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,34 +18,51 @@ body {
 #game-board {
     width: 300px;
     height: 300px;
-    background-color: black;
-    border: 1px solid black;
     display: flex;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .square {
     width: 100px;
     height: 100px;
-    background-color: white;
-    border: solid 2px black;
+    border: solid 2px rgb(255, 255, 255);
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.square:first-child, .square:nth-child(2), .square:nth-child(3){
+    border-top: none;
+}
+
+.square:nth-child(3), .square:nth-child(6), .square:nth-child(9){
+    border-right: none;
+}
+
+.square:nth-child(2){
+    border-top: none;
+}
+
+.square:nth-child(4), .square:nth-child(7), .square:first-child{
+    border-left: none;
+}
+.square:nth-child(7), .square:nth-child(8), .square:nth-child(9){
+    border-bottom: none;
+}
+
 .circle {
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
     border-radius: 50px;
-    border: 15px solid blue;
+    border: 15px solid rgb(255, 255, 255);
     box-sizing: border-box;
 }
 
 .cross {
-    height: 90px;
-    width: 90px;
+    height: 70px;
+    width: 70px;
     position: relative;
     transform: rotate(45deg);
 }
@@ -49,7 +70,7 @@ body {
 .cross::before, .cross::after {
     content: "";
     position: absolute;
-    background-color: red;
+    background-color: rgb(255, 255, 255);
 }
 
 .cross::before {
@@ -64,4 +85,47 @@ body {
     height: 30%;
     margin-top: -15%;
     width: 100%;
+}
+
+.game-setup {
+    width: 410px;
+    border: 2px solid #fff;
+    padding: 20px;
+}
+
+
+.info {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+hr {
+    margin: 20px 0px;
+}
+
+
+.choose-your-symbol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.symbol {
+    width: 25%;
+}
+
+
+.circle, .cross {
+    cursor: pointer;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+}
+
+
+.circle:active, .cross:active{
+    width: 65px;
+    height: 65px;
 }

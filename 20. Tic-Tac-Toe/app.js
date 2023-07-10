@@ -1,11 +1,29 @@
 const gameBoard = document.querySelector('#game-board');
 const info = document.querySelector('.info');
+const circle = document.querySelector('.circle');
+const cross = document.querySelector('.cross');
 
 const squares = ['','','','','','','','',''];
 
-let go = 'circle';
+let go = '';
 
-info.textContent = 'CIRCLE goes first';
+info.textContent = 'Choose your symbol to play!';
+
+circle.addEventListener('click', chooseSymbol);
+cross.addEventListener('click', chooseSymbol);
+
+function chooseSymbol(e){
+    go = e.target.classList.value;
+    if (go === 'circle'){
+        info.textContent = 'You choosed circle!'
+        info.style.color = '#fff'
+        return;
+    }
+    info.textContent = 'You choosed cross!'
+    info.style.color = '#fff'
+    
+}
+
 
 squares.forEach((_cell, index)=>{
     const cellElement = document.createElement('div');
@@ -18,12 +36,18 @@ squares.forEach((_cell, index)=>{
 
 function addGo(e){
     const goDisplay = document.createElement('div');
-    goDisplay.classList.add(go);
-    e.target.appendChild(goDisplay);
-    go = go === 'circle' ? 'cross' : 'circle';
-    info.textContent = `it is now ${go}'s go.`;
-    e.target.removeEventListener('click', addGo);
-    checkScore();
+    if (go !== ''){
+        goDisplay.classList.add(go);
+        e.target.appendChild(goDisplay);
+        go = go === 'circle' ? 'cross' : 'circle';
+        info.textContent = `${go.toUpperCase()} turn`;
+        e.target.removeEventListener('click', addGo);
+        checkScore();
+    }else {
+        info.style.color = 'red'
+    }
+    
+    
 }
 
 function checkScore() {
@@ -39,6 +63,8 @@ function checkScore() {
             allSquares[cell].firstChild?.classList.contains('circle'));
             if (circleWins){
                 info.textContent = "Circle Wins!";
+                info.style.color = 'green';
+                
                 allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
                 return;
             }
@@ -49,6 +75,7 @@ function checkScore() {
             allSquares[cell].firstChild?.classList.contains('cross'));
             if (crossWins){
                 info.textContent = "Cross Wins!";
+                info.style.color = 'green';
                 allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
                 return;
             }
