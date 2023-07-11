@@ -61,10 +61,14 @@ function checkScore() {
     winningCombos.forEach(array => {
         const circleWins = array.every(cell => 
             allSquares[cell].firstChild?.classList.contains('circle'));
+
             if (circleWins){
                 info.textContent = "Circle Wins!";
                 info.style.color = 'green';
-                
+                array.forEach(index => (
+                    allSquares[index].style.backgroundColor = 'green'
+                ))
+                // allSquares[cell].style.backgroundColor = 'green';
                 allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
                 return;
             }
@@ -76,6 +80,9 @@ function checkScore() {
             if (crossWins){
                 info.textContent = "Cross Wins!";
                 info.style.color = 'green';
+                array.forEach(index => (
+                    allSquares[index].style.backgroundColor = 'green'
+                ))
                 allSquares.forEach(square => square.replaceWith(square.cloneNode(true)))
                 return;
             }
