@@ -93,7 +93,6 @@ body {
     padding: 20px;
 }
 
-
 .info {
     font-size: 2rem;
     font-weight: bold;
@@ -104,18 +103,15 @@ hr {
     margin: 20px 0px;
 }
 
-
 .choose-your-symbol {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-
 .symbol {
     width: 25%;
 }
-
 
 .circle, .cross {
     cursor: pointer;
@@ -123,7 +119,6 @@ hr {
     width: 70px;
     height: 70px;
 }
-
 
 .circle:active, .cross:active{
     width: 65px;

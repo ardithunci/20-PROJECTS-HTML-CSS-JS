@@ -24,7 +24,6 @@ function chooseSymbol(e){
     
 }
 
-
 squares.forEach((_cell, index)=>{
     const cellElement = document.createElement('div');
     cellElement.classList.add('square');
